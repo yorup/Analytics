@@ -8,7 +8,6 @@ RUN pip install cx-Oracle clickhouse-connect mysql-connector-python
 USER root
 RUN apt-get update && apt-get install -y libaio1 unzip
 RUN apt-get install -y net-tools && apt-get install -y vim && apt-get install -y nano
-RUN apt-get install -y vim
 RUN mkdir /opt/oracle
 COPY ./instantclient-basic-linux.x64-19.19.0.0.0dbru.zip /opt/oracle/instantclient.zip
 RUN cd /opt/oracle && unzip /opt/oracle/instantclient.zip && rm -f /opt/oracle/instantclient.zip
